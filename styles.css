@@ -1,0 +1,446 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav {
+  margin: 0;
+  padding: 10px;
+  background: #002147;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url("interior-design-old-architecture.jpg") no-repeat center
+    center/cover;
+  position: relative;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+  pointer-events: none; /* Permite clicar nos elementos abaixo do pseudo-elemento */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima do pseudo-elemento */
+}
+
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+  color: white; /* Garante que o texto seja visível */
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  color: #d4af37; /* Ajusta a cor do texto para dourado */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #ddd; /* Ajusta a cor do parágrafo para um cinza claro */
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #d4af37;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Adiciona transição suave */
+  display: inline-block; /* Garante que o botão seja tratado como um bloco inline para a animação */
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  transform: scale(1.1); /* Aumenta levemente o tamanho */
+  background-color: #ffd700; /* Muda para um dourado mais claro */
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2; /* Garante que a imagem esteja acima do pseudo-elemento */
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.feature h3 {
+  color: #002147;
+}
+
+.testimonials,
+.contact {
+  background: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.additional-info {
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+}
+
+.info-text {
+  flex: 1;
+  margin-right: 20px;
+  color: #333; /* Cor do texto */
+}
+
+.info-text h3 {
+  color: #d4af37; /* Cor do subtítulo */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.info-text h2 {
+  color: #002147; /* Cor do título */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.info-text p {
+  color: #555; /* Cor do parágrafo */
+  margin-bottom: 20px;
+}
+
+.info-image {
+  flex: 1;
+  text-align: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.solutions {
+  background: #002147;
+  padding: 40px 20px;
+  color: white; /* Garante que o texto seja visível */
+}
+
+.solutions-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+}
+
+.solutions-text {
+  flex: 1;
+  margin-right: 20px;
+  color: white; /* Cor do texto */
+}
+
+.solutions-text h3 {
+  color: #d4af37; /* Cor do subtítulo */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.solutions-text h2 {
+  color: #ffffff; /* Cor do título */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.solutions-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.solutions-text ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.solutions-text ul li::before {
+  content: "✔"; /* Caractere de check */
+  margin-right: 10px;
+  color: #d4af37; /* Cor do check */
+}
+
+.solutions-image {
+  flex: 1;
+  text-align: center;
+}
+
+.solutions-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.about {
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+  color: #333; /* Cor do texto */
+}
+
+.about-text h3 {
+  color: #d4af37; /* Cor do subtítulo */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  color: #002147; /* Cor do título */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #555; /* Cor do parágrafo */
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.testimonials {
+  background: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-carousel-inner {
+  display: flex;
+  transition: transform 1s ease;
+  width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+}
+
+.testimonial-card {
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background: #002147;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+  .hero-content,
+  .info-content,
+  .solutions-content,
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .info-text,
+  .solutions-text,
+  .about-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 50%; /* Mostra dois cards por vez em telas médias */
+  }
+
+  .testimonial-carousel-inner {
+    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+  }
+}
+
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .features,
+  .info-content,
+  .solutions-content,
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature,
+  .info-text,
+  .solutions-text,
+  .about-text {
+    max-width: 90%;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%; /* Mostra um card por vez em telas pequenas */
+  }
+
+  .testimonial-carousel-inner {
+    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2,
+  .info-text h2,
+  .solutions-text h2,
+  .about-text h2 {
+    font-size: 1.5em;
+  }
+
+  .hero p,
+  .info-text p,
+  .solutions-text ul li,
+  .about-text p {
+    font-size: 0.9em;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%; /* Mostra um card por vez em telas menores */
+  }
+
+  .testimonial-carousel-inner {
+    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+  }
+}
