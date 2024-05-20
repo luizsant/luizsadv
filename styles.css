@@ -106,6 +106,7 @@ nav a {
 .cta-button:focus {
   transform: scale(1.1); /* Aumenta levemente o tamanho */
   background-color: #ffd700; /* Muda para um dourado mais claro */
+  color: #384196;
 }
 
 .hero-image {
