@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Função do menu sanduíche
   function toggleMenu() {
     const menu = document.querySelector(".menu");
+    const menuIcon = document.querySelector(".menu-icon");
     menu.classList.toggle("open");
+    menuIcon.classList.toggle("open");
   }
 
   // Adiciona evento ao ícone do menu

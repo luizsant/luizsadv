@@ -553,16 +553,24 @@ nav a {
     font-size: 0.9em;
   }
 }
-/* Estilos para o menu de navegação */
 nav {
+  margin: 0;
+  padding: 18px 10px;
   background: #002147;
-  padding: 10px;
   text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav .menu {
   display: flex;
   justify-content: center;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
 }
 
 nav a {
@@ -577,13 +585,26 @@ nav a {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.menu-icon.open {
+  content: "✖"; /* Muda o ícone para "X" quando aberto */
 }
 
 /* Estilos responsivos para o menu sanduíche */
 @media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
   nav .menu {
-    display: none;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
@@ -597,5 +618,6 @@ nav a {
 }
 
 .menu.open {
-  display: flex !important;
+  max-height: 500px;
+  opacity: 1;
 }
