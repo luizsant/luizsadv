@@ -460,3 +460,96 @@ nav a {
     margin-bottom: 20px;
   }
 }
+/* Seções de abordagem, valores e experiência */
+#minha-abordagem,
+#meus-valores,
+#minha-experiencia {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+#minha-abordagem h2,
+#meus-valores h2,
+#minha-experiencia h2 {
+  font-size: 2em;
+  color: #002147;
+  margin-bottom: 20px;
+}
+
+#minha-abordagem p,
+#meus-valores p,
+#minha-experiencia p {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#meus-valores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#meus-valores ul li {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#meus-valores ul li strong {
+  color: #002147;
+}
+
+/* Adicionar estilos responsivos para as novas seções */
+@media (max-width: 1024px) {
+  #minha-abordagem p,
+  #meus-valores p,
+  #minha-experiencia p {
+    max-width: 90%;
+  }
+
+  #meus-valores ul {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #minha-abordagem h2,
+  #meus-valores h2,
+  #minha-experiencia h2 {
+    font-size: 1.8em;
+  }
+
+  #minha-abordagem p,
+  #meus-valores p,
+  #minha-experiencia p {
+    font-size: 1em;
+  }
+
+  #meus-valores ul li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  #minha-abordagem h2,
+  #meus-valores h2,
+  #minha-experiencia h2 {
+    font-size: 1.5em;
+  }
+
+  #minha-abordagem p,
+  #meus-valores p,
+  #minha-experiencia p {
+    font-size: 0.9em;
+  }
+
+  #meus-valores ul li {
+    font-size: 0.9em;
+  }
+}
