@@ -19,22 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 
-  // Carrossel automático
-  const carousel = document.querySelector(".testimonial-carousel-inner");
-  const cards = document.querySelectorAll(".testimonial-card");
-  let index = 0;
-  const numCardsVisible =
-    window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-
-  function moveCarousel() {
-    index += numCardsVisible; // Mover conforme o número de cards visíveis
-    if (index >= cards.length) {
-      index = 0;
-    }
-    carousel.style.transform = `translateX(${
-      -index * (100 / numCardsVisible)
-    }%)`;
+  // Função do menu sanduíche
+  function toggleMenu() {
+    const menu = document.querySelector(".menu");
+    menu.classList.toggle("open");
   }
 
-  setInterval(moveCarousel, 3000); // Muda o card a cada 3 segundos
+  // Adiciona evento ao ícone do menu
+  const menuIcon = document.querySelector(".menu-icon");
+  if (menuIcon) {
+    menuIcon.addEventListener("click", toggleMenu);
+  }
 });

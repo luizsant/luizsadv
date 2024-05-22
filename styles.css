@@ -553,3 +553,49 @@ nav a {
     font-size: 0.9em;
   }
 }
+/* Estilos para o menu de navegação */
+nav {
+  background: #002147;
+  padding: 10px;
+  text-align: center;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos responsivos para o menu sanduíche */
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.menu.open {
+  display: flex !important;
+}
