@@ -76,7 +76,7 @@ nav a {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
@@ -377,6 +377,10 @@ nav a {
   .testimonial-carousel-inner {
     width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
   }
+  .logo {
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -450,5 +454,9 @@ nav a {
 
   .testimonial-carousel-inner {
     width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+  }
+  .logo {
+    max-width: 320px;
+    margin-bottom: 20px;
   }
 }
