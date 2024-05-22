@@ -22,6 +22,19 @@ nav {
   padding: 10px;
   background: #002147;
   text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  transition: none;
+  overflow: visible;
+  max-height: none;
+  opacity: 1;
 }
 
 nav a {
@@ -29,6 +42,48 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 18px 10px;
+  }
+
+  nav .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  nav a {
+    margin: 4px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu.open {
+    max-height: 500px;
+    opacity: 1;
+  }
 }
 
 .hero {
@@ -56,7 +111,7 @@ nav a {
     ),
     linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
   z-index: 1;
-  pointer-events: none; /* Permite clicar nos elementos abaixo do pseudo-elemento */
+  pointer-events: none;
 }
 
 .hero-content {
@@ -66,13 +121,13 @@ nav a {
   width: 100%;
   max-width: 1200px;
   position: relative;
-  z-index: 2; /* Coloca o conteúdo acima do pseudo-elemento */
+  z-index: 2;
 }
 
 .hero-text {
   flex: 1;
   margin-right: 20px;
-  color: white; /* Garante que o texto seja visível */
+  color: white;
 }
 
 .logo {
@@ -81,13 +136,13 @@ nav a {
 }
 
 .hero h2 {
-  color: #d4af37; /* Ajusta a cor do texto para dourado */
+  color: #d4af37;
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
 .hero p {
-  color: #ddd; /* Ajusta a cor do parágrafo para um cinza claro */
+  color: #ddd;
   margin-bottom: 20px;
 }
 
@@ -98,14 +153,14 @@ nav a {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Adiciona transição suave */
-  display: inline-block; /* Garante que o botão seja tratado como um bloco inline para a animação */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
 }
 
 .cta-button:hover,
 .cta-button:focus {
-  transform: scale(1.1); /* Aumenta levemente o tamanho */
-  background-color: #ffd700; /* Muda para um dourado mais claro */
+  transform: scale(1.1);
+  background-color: #ffd700;
   color: #ffffff;
 }
 
@@ -118,7 +173,7 @@ nav a {
   max-width: 100%;
   border-radius: 50%;
   position: relative;
-  z-index: 2; /* Garante que a imagem esteja acima do pseudo-elemento */
+  z-index: 2;
 }
 
 .features {
@@ -164,29 +219,29 @@ nav a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+  flex-wrap: wrap;
 }
 
 .info-text {
   flex: 1;
   margin-right: 20px;
-  color: #333; /* Cor do texto */
+  color: #333;
 }
 
 .info-text h3 {
-  color: #d4af37; /* Cor do subtítulo */
+  color: #d4af37;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .info-text h2 {
-  color: #002147; /* Cor do título */
+  color: #002147;
   font-size: 2em;
   margin-bottom: 20px;
 }
 
 .info-text p {
-  color: #555; /* Cor do parágrafo */
+  color: #555;
   margin-bottom: 20px;
 }
 
@@ -203,7 +258,7 @@ nav a {
 .solutions {
   background: #002147;
   padding: 40px 20px;
-  color: white; /* Garante que o texto seja visível */
+  color: white;
 }
 
 .solutions-content {
@@ -213,23 +268,23 @@ nav a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+  flex-wrap: wrap;
 }
 
 .solutions-text {
   flex: 1;
   margin-right: 20px;
-  color: white; /* Cor do texto */
+  color: white;
 }
 
 .solutions-text h3 {
-  color: #d4af37; /* Cor do subtítulo */
+  color: #d4af37;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .solutions-text h2 {
-  color: #ffffff; /* Cor do título */
+  color: #ffffff;
   font-size: 2em;
   margin-bottom: 20px;
 }
@@ -246,9 +301,9 @@ nav a {
 }
 
 .solutions-text ul li::before {
-  content: "✔"; /* Caractere de check */
+  content: "✔";
   margin-right: 10px;
-  color: #d4af37; /* Cor do check */
+  color: #d4af37;
 }
 
 .solutions-image {
@@ -274,29 +329,29 @@ nav a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Adiciona flex-wrap para garantir a responsividade */
+  flex-wrap: wrap;
 }
 
 .about-text {
   flex: 1;
   margin-right: 20px;
-  color: #333; /* Cor do texto */
+  color: #333;
 }
 
 .about-text h3 {
-  color: #d4af37; /* Cor do subtítulo */
+  color: #d4af37;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .about-text h2 {
-  color: #002147; /* Cor do título */
+  color: #002147;
   font-size: 2em;
   margin-bottom: 20px;
 }
 
 .about-text p {
-  color: #555; /* Cor do parágrafo */
+  color: #555;
   margin-bottom: 20px;
 }
 
@@ -327,7 +382,7 @@ nav a {
 .testimonial-carousel-inner {
   display: flex;
   transition: transform 1s ease;
-  width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+  width: calc(100% * 5);
 }
 
 .testimonial-card {
@@ -348,7 +403,6 @@ nav a {
   text-align: center;
 }
 
-/* Estilos Responsivos */
 @media (max-width: 1024px) {
   .hero-content,
   .info-content,
@@ -371,12 +425,13 @@ nav a {
   }
 
   .testimonial-card {
-    flex: 0 0 50%; /* Mostra dois cards por vez em telas médias */
+    flex: 0 0 50%;
   }
 
   .testimonial-carousel-inner {
-    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+    width: calc(100% * 5);
   }
+
   .logo {
     max-width: 350px;
     margin-bottom: 20px;
@@ -421,11 +476,11 @@ nav a {
   }
 
   .testimonial-card {
-    flex: 0 0 100%; /* Mostra um card por vez em telas pequenas */
+    flex: 0 0 100%;
   }
 
   .testimonial-carousel-inner {
-    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+    width: calc(100% * 5);
   }
 }
 
@@ -449,18 +504,19 @@ nav a {
   }
 
   .testimonial-card {
-    flex: 0 0 100%; /* Mostra um card por vez em telas menores */
+    flex: 0 0 100%;
   }
 
   .testimonial-carousel-inner {
-    width: calc(100% * 5); /* Ajuste o número de itens no carrossel */
+    width: calc(100% * 5);
   }
+
   .logo {
     max-width: 320px;
     margin-bottom: 20px;
   }
 }
-/* Seções de abordagem, valores e experiência */
+
 #minha-abordagem,
 #meus-valores,
 #minha-experiencia {
@@ -505,7 +561,6 @@ nav a {
   color: #002147;
 }
 
-/* Adicionar estilos responsivos para as novas seções */
 @media (max-width: 1024px) {
   #minha-abordagem p,
   #meus-valores p,
@@ -552,72 +607,4 @@ nav a {
   #meus-valores ul li {
     font-size: 0.9em;
   }
-}
-nav {
-  margin: 0;
-  padding: 18px 10px;
-  background: #002147;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav .menu {
-  display: flex;
-  justify-content: center;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
-
-.menu-icon.open {
-  content: "✖"; /* Muda o ícone para "X" quando aberto */
-}
-
-/* Estilos responsivos para o menu sanduíche */
-@media (max-width: 768px) {
-  nav {
-    justify-content: space-between;
-  }
-
-  nav .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-
-.menu.open {
-  max-height: 500px;
-  opacity: 1;
 }
