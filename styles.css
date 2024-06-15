@@ -172,8 +172,15 @@ nav a {
 
 .button-container {
   text-align: center;
+  justify-content: center; /* Centralizar o botão dentro do container */
 }
-
+.cta-container {
+  text-align: center;
+  margin: 20px 0;
+  width: 100%; /* Garantir que o container do botão ocupe 100% da largura */
+  display: flex;
+  justify-content: center; /* Centralizar o botão dentro do container */
+}
 .hero-image {
   flex: 1;
   text-align: center;
@@ -385,6 +392,36 @@ nav a {
   color: white;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.footer-content p:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-content {
+    padding: 0 10px;
+  }
 }
 
 /* Animations */
@@ -616,5 +653,59 @@ nav a {
 
   #meus-valores ul li {
     font-size: 0.9em;
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials h3 {
+  color: #002147;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.testimonial-card h4 {
+  color: #002147;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  color: #555;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .testimonials-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    flex: 1 1 100%;
+    max-width: 90%;
   }
 }
